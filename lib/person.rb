@@ -1,4 +1,3 @@
-ruby
 require 'pry'
 class Person
     attr_reader :name, :happiness, :hygiene
@@ -88,3 +87,41 @@ class Person
         end
     end
 end
+
+def test
+    katie = Person.new("Katie")
+    ethan = Person.new("Ethan")
+    #work out test
+    puts "Workout test:"
+    5.times {
+        katie.work_out
+        puts katie.hygiene
+    }
+    katie.clean?
+
+    katie.call_friend(ethan)
+    katie.call_friend(ethan)
+    katie.call_friend(ethan)
+    puts "Katie's happiness: #{katie.happiness}"
+    puts "Ethan's happiness: #{ethan.happiness}"
+
+    puts "Politics conversation"
+    katie.start_conversation(ethan, "politics")
+    puts "Katie's happiness: #{katie.happiness}"
+    puts "Ethan's happiness: #{ethan.happiness}"
+
+    puts "Weather conversation"
+    katie.start_conversation(ethan, "weather")
+    puts "Katie's happiness: #{katie.happiness}"
+    puts "Ethan's happiness: #{ethan.happiness}"
+
+    puts "Conversation about nothing"
+    katie.start_conversation(ethan, "nothing")
+    puts "Katie's happiness: #{katie.happiness}"
+    puts "Ethan's happiness: #{ethan.happiness}"
+
+end
+
+# binding.pry
+
+# Awesomeness provided by Ethan Roberts and Katie Carrel
